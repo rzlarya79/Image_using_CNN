@@ -4,7 +4,7 @@ import numpy as np
 import os
 import cv2
 
-port = int(os.environ.get('PORT', 5000))
+port = int(os.environ.get('PORT', 33507))
 app.run(host='0.0.0.0', port=port, debug=True)
 
 app = Flask(__name__)
@@ -41,5 +41,5 @@ def send_uploaded_image(filename=''):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 if __name__ == '__main__':
-   port = int(os.environ.get("PORT", 5000))
+   port = int(os.environ.get("PORT", 33507))
    app.run(debug=True, host='0.0.0.0', port=port)
